@@ -1,0 +1,251 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Shopping Cart Container */
+.shopping-card-container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Product List */
+.list-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.unit-price {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Buttons and Icons */
+i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.fa-trash-alt {
+  color: #de6b5c;
+}
+
+.fa-heart {
+  color: black;
+}
+
+.fa-heart.liked {
+  color: red;
+}
+
+i:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list-products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .total-price {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+/* Enhanced Styles */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.quantity,
+.unit-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.fa-trash-alt:hover,
+.fa-heart:hover {
+  transform: scale(1.1);
+}
+
+.fa-heart {
+  transition: color 0.3s ease;
+}
+
+.fa-heart.liked {
+  color: red;
+}
+
+.undo-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.undo-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .list-products {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+/* Default Light Mode */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .toggle-night-mode {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+body.dark-mode .fa-heart.liked {
+  color: #ff6b6b;
+}
+
+body.dark-mode .fa-trash-alt {
+  color: #ff4d4d;
+}
+
+body.dark-mode .fa-heart:hover,
+body.dark-mode .fa-trash-alt:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .toggle-night-mode {
+    font-size: 1.2rem;
+  }
+}
