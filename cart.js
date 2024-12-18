@@ -5,7 +5,7 @@ const productList = document.querySelector(".list-products");
 // Update total price dynamically
 const updateTotal = () => {
   let total = 0;
-  document.querySelectorAll(".card-body").forEach((product) => {
+  document.querySelectorAll(".card").forEach((product) => {
     const quantity = parseInt(product.querySelector(".quantity").textContent);
     const unitPrice = parseFloat(
       product.querySelector(".unit-price").textContent.replace("$", "")
